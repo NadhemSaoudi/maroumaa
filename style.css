@@ -1,0 +1,123 @@
+/* Define the styles for the love theme */
+body {
+	background-color: #FFC0CB;
+}
+
+header {
+	text-align: center;
+	margin-top: 50px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 48px;
+	color: #800000;
+	position: relative;
+}
+
+.heart-container {
+	position: absolute;
+	top: -50px;
+	left: 50%;
+	transform: translateX(-50%);
+	animation: float 3s ease-in-out infinite;
+}
+
+.heart {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	position: relative;
+	margin: 0 10px;
+	animation: beat 1s infinite;
+}
+
+.heart:before,
+.heart:after {
+	content: "";
+	position: absolute;
+	width: 20px;
+	height: 30px;
+	background-color: #FFC0CB;
+	border-radius: 15px 15px 0 0;
+	transform: rotate(-45deg);
+}
+
+.heart:before {
+	top: -15px;
+	left: 0;
+}
+
+.heart:after {
+	top: 0;
+	left: 15px;
+}
+
+main {
+	margin: 50px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 24px;
+	color: #800000;
+	animation: slide-in 1s ease-out forwards;
+	opacity: 0;
+}
+
+/* Define animations */
+@keyframes beat {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.5);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes float {
+	0% {
+		transform: translate(0, 0);
+	}
+
+	50% {
+		transform: translate(0, 15px);
+	}
+
+	100% {
+		transform: translate(0, 0);
+	}
+}
+
+@keyframes slide-in {
+	0% {
+		transform: translateX(-100%);
+	}
+
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+.footer {
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  .footer a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4267B2;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 25px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .footer a:hover {
+    background-color: #3B5998;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+  }
+  
